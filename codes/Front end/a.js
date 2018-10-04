@@ -1,0 +1,1 @@
+document.getElementById("myID").innerHTML="Hello Boss";

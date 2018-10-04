@@ -1,0 +1,541 @@
+
+https://www.jqueryui.com/
+
+https://plugins.jquery.com
+
+to -do-------------------https://github.com/poojverm1/Node_apis1.git------------------
+
+-----------http://api.jquery.com/category/selectors/------------
+http://api.jquery.com/category/events 
+http://api.jquery.com/category/events/form-events/
+http://api.jquery.com/animate/
+http://api.jquery.com/event.preventdefault/
+
+https://www.youtube.com/watch?v=v7RNNj8u13g&frags=pl%2Cwn shared module : saurabh srivastaca -20/sep/2019
+
+
+---
+
+------https://www.quora.com/Which-is-the-best-AngularJS-tutorial-with-a-step-by-step-project----
+mozilla developer site .
+
+
+----
+https://developer.mozilla.org/bm/docs/Web/JavaScript/Guide
+--
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+-------------
+
+let i ="abc" ;
+
+for(  i=0;i<10;i++){
+alert(i);
+}
+alert(i);
+
+
+-------------------------
+
+let allList =[];
+
+alert(allList);
+let push =(...people) =>{
+let newpeople=people;
+allList=allList.push(newpeople);
+alert(allList);
+return allList;
+}
+
+push("A","B","C");
+
+push("D","E","F");
+
+
+------------------
+
+var a =[1,3];
+var b =[11,33];
+
+var c=[...a,...b];
+
+alert(c);
+
+
+---------------
+let D="ABC";
+
+let E="DEFF";
+
+let C ={D,E}
+
+alert(C);
+
+console.log(C);
+
+--------------
+
+let a="tada";
+
+let b ="soja";
+
+let f={
+[a]:b
+}
+console.log(f);
+
+-----------------
+
+let a= [{
+ key1 :"Bijoy Cherian",
+mobile :"9178967809" 
+},
+{
+key1 :"yojib Cherian",
+mobile :"6889902"
+}
+];
+
+for(x in a){
+console.log(a[x].mobile);
+}
+
+
+
+-----------
+
+let a= [{
+ key1 :"Bijoy Cherian",
+mobile :"9178967809" 
+},
+{
+key1 :"yojib Cherian",
+mobile :"6889902"
+}
+];
+
+for(x of a){
+console.log(x);
+}
+
+
+
+=---------------
+
+
+let listLength='';
+
+let returnlength = (...input)=>{
+
+let newinput=input;
+listLength=newinput.length;
+return listLength;
+}
+
+let i=returnlength("A","B","C");
+
+console.log(i);
+
+
+-----------------
+
+
+<html>
+<body>
+<h1>this is header 1 </h1>
+<h2>this is header 2 </h2>
+<p style="color:red">AABSBBD</p>
+</body>
+</html>
+
+
+---------------------
+
+
+
+
+<html>
+<head>
+<h2>This is header </h2>
+<style>
+p {color:blue;}
+</style>
+
+</head>
+<body>
+<h1>this is header 1 </h1>
+<h2>this is header 2 </h2>
+<p>AABSBBD</p>
+</body>
+</html>
+
+
+----inline takes preference ----
+
+
+<html>
+<head>
+<h2>This is header </h2>
+<style>
+p {color:blue;}
+</style>
+
+</head>
+<body>
+<h1>this is header 1 </h1>
+<h2>this is header 2 </h2>
+<p style="color:red">AABSBBD</p>
+</body>
+</html>
+
+------------------------
+
+
+<html>
+<head>
+<h2>This is header </h2>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<h1>this is header 1 </h1>
+<h2>this is header 2 </h2>
+<p>AABSBBD</p>
+</body>
+</html>
+
+
+
+css in another file with name as style.css
+
+p{
+color:darkblue;
+}
+
+
+-----------------
+
+same above html with css having font-size 
+
+p{
+color:darkblue;
+font-size:10px
+}
+
+
+-------------------
+
+with class in style.css
+
+p{
+color:darkblue;
+font-size:10px
+}
+
+h2{
+border:1px solid blue;
+}
+
+.policeStyle{
+color:purple;
+font-size:20px;
+font-weight:bold;
+}
+
+-------
+
+<html>
+<head>
+<h2>This is header </h2>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="policeStyle">
+<h1>this is header 1 </h1>
+<h2>this is header 2 </h2>
+<p>AABSBBD</p>
+</body>
+</html>
+
+
+---------------------
+
+
+#idName in style.css file
+
+p{
+color:darkblue;
+font-size:10px
+}
+
+h2{
+border:1px solid blue;
+}
+
+.policeStyle{
+color:purple;
+font-size:20px;
+font-weight:bold;
+}
+
+#idPolice{
+color:green;
+font-size:36px;
+font-weight:bolder;
+}
+---------
+cheat sheet css downloaded by edWisor.com
+-------
+<html>
+<head>
+<h2>This is header </h2>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="policeStyle">
+<h1 id="idPolice" >this is header 1 </h1>
+<h2>this is header 2 </h2>
+<p>AABSBBD</p>
+</body>
+</html>
+
+----------------------
+
+for using js in HTML 
+
+<html>
+<body>
+<p>I am a tarzan 
+where is my tarzani ? 
+can she fly ?
+</p>
+
+<p id='myID'>I am a tarzan 
+where is my tarzani ? 
+can she fly ?
+</p>
+<script src="a.js" type="text/javascript" >
+</script>
+</body>
+</html>
+
+---a.js
+document.getElementById("myID").innerHTML="Hello Boss";
+
+-----------------------------
+
+checking different behaviour of websites on diff mobile phone  use screenfly .
+
+site : http://quirktools.com/screenfly/
+
+----view port defines are of screen that browser can render the content to ( in different device ( S,M or L , site should re-size itself)
+  . 3 main attributes : height , width ,scale & resolution.
+
+https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag
+
+standarad syntax under <head> tag 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+removing horizontal scrolling by using Root em . 
+
+media queries :
+https://www.w3.org/TR/css3-mediaqueries/
+
+
+----------------trying media query ----------------
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media</title>
+<link rel="stylesheet" type="text/css" href="k.css">
+</head>
+<body>
+<div class="parent">
+Hey
+<div class="child">
+child
+</div>
+</div>
+</body>
+</html>
+
+
+k.css
+
+.parent {
+background-color:red;
+height:100vh;
+width:50vw;
+}
+
+.child {
+background:violet;
+height: 50vh;
+width: 60vw;
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+
+.parent {
+background:grey;
+height:40vh;
+}
+}
+
+@media screen and (max-width: 480px) {
+
+.parent {
+background:lightblue;
+height:70vh;
+}
+
+}
+
+
+-----------------------------
+
+
+https://www.sanfoundry.com/javascript-mcqs-jquery-library/
+
+http://jquery-interview-questions.blogspot.com/2015/09/jquery-multiple-choice-questions-and-answers-pdf.html
+
+https://www.tutorialspoint.com/jquery/jquery_online_quiz.htm
+
+https://www.careerride.com/online-practice-test/jQuery
+
+----------------------------------
+github :version control system .
+
+
+repositry name should be username.github.io
+git init
+
+git add --all
+
+git commit -am <some name>
+
+create repository : git remote add origin <repository URL>
+
+git add --all >> git commit -am "first change" >> git push origin master (give password and userid )>> git pull origin master 
+
+git status , git log , .gitignore 
+
+official site  : https://git-scm.com/docs/gitignore 
+
+https://getbootstrap.com/docs/4.1/getting-started/contents/
+
+----------------------------------shorter HTML and JS ----------------------------
+
+<html>
+<head>
+<script src="bigbang.js"></script>
+</head>
+<body>
+</body>
+</html>
+
+-----js-----------
+
+
+
+
+
+let episodeInfo = (seasonNo=1,episodeNo=2) =>{ 
+console.log("Season : "+seasonNo);
+ console.log("Episode : "+episodeNo);
+}
+
+let seasonNo = window.prompt('Enter season Number');
+let episodeNo = window.prompt('Enter episode Number');
+
+if (seasonNo==''){
+seasonNo=1;
+}
+
+if (episodeNo==''){
+episodeNo=2;
+}
+
+
+episodeInfo(seasonNo,episodeNo);
+
+
+--------------------------------------------------------------
+
+jquery 
+------------
+
+
+---index.js----
+
+$(document).ready(()=>{
+
+let myText= $('p').html();
+alert(myText);
+}
+)
+
+
+.html() --> display raw html ..if you want to display only the text user  .text()
+---------------
+shorter  : 
+
+
+$document.ready(()=> {
+
+alert($('#newText .someText').text();)
+}
+)
+
+--------------------------------------------------------------
+replace a text  
+
+$document.ready(()=> {
+
+newText=`This is me 
+look I am in second line
+This is third line . I came this far . `
+
+$('#newText').text(newText)
+}
+)
+
+------------------change attr of image src -------------------
+
+
+$document.ready(()=>{
+$(".my-image").attr("src","https://images.pexels.com/photos/60597/dahlia-red-blossom-bloom-60597.jpeg")
+
+})
+
+-----------------append to paragraph-------------------------
+
+$document.ready(()=> {
+
+$('#newText').append("adding an extra line .I am getting used to it .")
+})
+
+-----------------preprend to paragraph -----------------------
+$document.ready(()=> {
+
+$('#newText').append("adding an extra line .I am getting used to it .")
+})
+
+------------------after to paragraph --------------------------
+$document.ready(()=> {
+
+$('#newText').append("adding an extra line .I am getting used to it .")
+})
+
+----------------------------------------------------------------
+----------------------------remove classses---------------------
+$document.ready(()=> {
+
+$('#newText').remove();
+})
+
+---------------epmty the structurer and retain the structure ----
+
+$document.ready(()=> {
+
+$("#newText").empty();
+})
+----------------------------------------------------------------
+

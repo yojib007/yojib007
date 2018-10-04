@@ -1,0 +1,80 @@
+db.product_catalog.find({}).pretty();
+
+db.product_catalog.find({},{ _id:0,(golgol,price):1}).pretty();
+
+db.product_catalog.find({},{ golgol:1,price:1,_id:0}).pretty();
+
+db.product_catalog.find({colors:"red"}).pretty();
+
+db.product_catalog.find({},{ golgol:1,price:1}).pretty();
+
+db.product_catalog.find({golgol :9090},{ _id:0}).pretty();
+
+db.product_catalog.find({manufacturer :"apple"},{"_id":0}).pretty();
+
+db.product_catalog.find({ $and: [{manufacturer:"apple"}, {colors:{$in:["black","silver"]}}] }).pretty();
+
+db.product_catalog.find({ $and: [{manufacturer:"apple"}, {colors:{$in:["black","silver"]}},{year_of_launch:{$gte:2016}}, {price :{$gte:300}}] }).pretty();
+
+db.product_catalog.find({ $nor: [{manufacturer:"apple"}, {colors:{$in:["black","silver"]}},{year_of_launch:{$gte:2016}}, {price :{$ne:400}}] }).pretty();
+
+db.product_catalog.find({manufacturer:"apple"});
+
+db.product_catalog.update ({price :550 },{ $inc:{ price :150 }});
+
+db.product_catalog.update ({price :400 },{ $inc:{ price :150 }});
+
+db.product_catalog.update ({price :550 },{ $unset:{price:""}});
+
+inserts a column as well 
+db.product_catalog.update ({golgol :9090},{$set: {price :400}});
+
+db.product_catalog.update ({price :400 },{ $mul:{price : NumberInt(5)}});
+
+db.product_catalog.update ({golgol :9090},{ $rename:{ column1 : "column2"}});
+
+}
+
+db.product_catalog.insert({
+        "_id" : ObjectId("5b4329c951e8ef43b04f41a7"),
+        "prodid" : 7000012,
+        "prodname" : "Java for Dummies",
+        "publisher" : "John Wiley",
+                "genre" : {
+        "academic" : "technical"
+                },
+        "ISBN" : 18407806,
+        "price" : 500
+});
+
+db.product_catalog.aggregate( [
+                { $group: { _id: "$manufacturer", totalProducts: { $sum: 1 }} }
+] ).pretty();
+
+db.product_catalog.aggregate( [
+                { $sort : { price: 1 } },
+                { $limit: 5},
+                { $out: "5cheap"}
+] )
+
+db.tes.insert(
+{empid:900, ename:"Anna", skills:["Java"]});
+
+db.test.find({p_id:{$exists :true}}).pretty()
+
+db.test.find({skills:{$exists :true}}).pretty()
+
+db.test.find( {"subject" : { $all : ["math", "physics" ] } } )
+
+db.test.find( { deptname: "BDA" },
+                              { employees: { $elemMatch: { desg: "SE", age: { $gt: 23 } } } } )
+
+db.tes.updateMany( {},
+                { $push: { skills: "BI" } }
+)
+
+db.tes.removeMany(
+    {
+        skills: "BI"
+    }
+)
